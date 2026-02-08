@@ -3,8 +3,10 @@ services:
     image: prawee/strapi:latest
     container_name: 68-s3-app
     restart: unless-stopped
+
     env_file:
       - .env
+
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_HOST: s3db
@@ -12,5 +14,6 @@ services:
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USER}
       DATABASE_PASSWORD: ${DATABASE_PASS}
+
     ports:
       - "${APP_PORT}:1337"
