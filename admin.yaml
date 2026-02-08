@@ -3,7 +3,8 @@ services:
     image: dpage/pgadmin4:latest
     container_name: 68-s3-admin
     restart: unless-stopped
-
+    env_file:
+      - .env
     environment:
       PGADMIN_DEFAULT_EMAIL: "${PGADMIN_DEFAULT_EMAIL}"
       PGADMIN_DEFAULT_PASSWORD: "${PGADMIN_DEFAULT_PASSWORD}"
