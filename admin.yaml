@@ -10,4 +10,4 @@ services:
       PGADMIN_DEFAULT_PASSWORD: "${PGADMIN_DEFAULT_PASSWORD}"
 
     ports:
-      - "8080:80"
+      - "ADMIN_PORT:80"
